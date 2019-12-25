@@ -1,6 +1,6 @@
 ## react-sample
 
-This is where you include your WebPart documentation.
+This is where you include your WebPart documentation. Loserpool!!!!
 
 ### Building the code
 
