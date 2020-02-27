@@ -3,4 +3,6 @@ export interface IReactSamplewpProps {
   listName: string;  
   spHttpClient: SPHttpClient;  
   siteUrl: string;
+  disabled?: boolean;
+  checked?: boolean;
 }
