@@ -22,7 +22,7 @@ export default class ReactSamplewp extends React.Component<IReactSamplewpProps, 
   public render(): React.ReactElement<IReactSamplewpProps> {
     const items: JSX.Element[] = this.state.items.map((item: IListItem, i: number): JSX.Element => {
       return (
-        <li>{item.Title} ({item.Id}) </li>
+        <li>{item.Title} ({item.Id}) ({item.Id}) </li>
       );
     });
     return (
