@@ -12,7 +12,8 @@ import ReactSamplewp from './components/ReactSamplewp';
 import { IReactSamplewpProps } from './components/IReactSamplewpProps';
 
 export interface IReactSamplewpWebPartProps {
-  listName: string;
+  description: string;
+  listNameWPProp: string;
 }
 
 export default class ReactSamplewpWebPart extends BaseClientSideWebPart<IReactSamplewpWebPartProps> {
@@ -21,9 +22,9 @@ export default class ReactSamplewpWebPart extends BaseClientSideWebPart<IReactSa
     const element: React.ReactElement<IReactSamplewpProps > = React.createElement(
       ReactSamplewp,
       {
-        listName: this.properties.listName,
-        spHttpClient: this.context.spHttpClient,  
-        siteUrl: this.context.pageContext.web.absoluteUrl  
+        description: this.properties.description,
+        listNameReactProp: this.properties.listNameWPProp,
+        context: this.context   
       }
     );
 
@@ -49,7 +50,7 @@ export default class ReactSamplewpWebPart extends BaseClientSideWebPart<IReactSa
             {
               groupName: strings.BasicGroupName,
               groupFields: [
-                PropertyPaneTextField('listName', {
+                PropertyPaneTextField('listNameWPProp', {
                   label: strings.ListNameFieldLabel  
                 })
               ]
