@@ -6,4 +6,5 @@ export interface IReactSamplewpProps {
   context: WebPartContext; 
   disabled?: boolean;
   checked?: boolean;
+ 
 }
